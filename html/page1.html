@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="/js/functions.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/images/logo_fondo2.png" type="image/x-icon">
+        <link rel="stylesheet" href="/css/style1.css">
+        <title>Alertma</title>
+    </head>
+<body onload="cargar()">
+    <header class="head">
+        <div class="head1">
+            <img src="/images/logo_fondo2.png" alt="Logo">
+            <h1>Aler <h1 id="tma">tma</h1></h1>
+            
+        </div>
+        <div class="head2">
+            <nav>
+                <a href="">Home</a>
+                <a href="">Info</a>
+                <a href="">Date</a>
+                <a href="">Blog</a>
+                <a href="">Contact</a>
+            </nav>
+        </div>
+        <div>
+            <h2 id="info">Username</h2>
+        </div>
+    </header>
+
+    
+    <div class="container" id="registro">
+        <form action="" class="formulario">
+            <h3>Comparte tu información</h3>
+            <input type="text" placeholder="Inserte su Nombre..." id="name" autocomplete="off">
+            <input type="text" placeholder="Inserte su Apellido" id="lastname" autocomplete="off">
+            <a href="#" onclick="datos()">Registrarse</a>
+        </form>
+    </div>
+
+    
+    <div id="page">
+        <div><h5>Bienvenido <h5 id="info2"></h5></h5></div>
+        <div><h5>Esta es la página de Alertma</h5></div>
+
+        <button class="notifications">
+            <a href="#" onclick="news()">Novedades</a>
+        </button>
+    
+        <div class="alert hide">
+            <span class="warning"><Icon name="mdi:warning-circle" /></span>
+            <span class="message">Recordatorio: No olvides consultar a tu médico</span>
+            <span class="close">
+                <span class="est"><Icon name="mdi:close" /></span>
+            </span>
+    
+        </div>  
+    </div>
+
+    
+
+
+
+    
+</body>
+
+</html>

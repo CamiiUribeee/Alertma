@@ -1,0 +1,241 @@
+
+body{
+    margin: 0 auto;
+}
+
+.head{
+    background-color: #f1a1bc;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.head1{
+    display: flex;
+    align-items: center;
+    color: #f70354;
+    font-size:smaller;
+}
+#tma {
+    color: white;
+}
+.head1 img{
+    width: 30px;
+    height: 30px;
+    padding: 0px 6px;
+}
+.head2 nav{
+    display: flex;
+    gap: 16px;
+    text-decoration: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    text-decoration: overline;
+    color: #f70354;
+}
+
+.container{
+    width: 100%;
+    display:flex ;
+    justify-content: center;
+}
+.cuadro{
+    margin: 5%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 80vh;
+    height: 70vh;
+    border-radius: 10px;
+    background-color: #ee82ca;
+}
+.c1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white; 
+    font-size: 150%;
+    border-bottom: 2px white solid;
+}
+.c2{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 200%;
+    padding: 20px 0px;
+}
+.c2 a{
+    text-align: center;
+    border: 2px white double;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white; 
+    padding: 0px 5px;
+}
+.c2 a:hover{
+    
+    background-color:white;
+    color: #ee82ca;
+    border: #ee82ca;
+}
+
+.formulario {
+    background-color: #f1a1bc;
+    padding: 10px;
+    margin-top: 2%;
+    display: grid;
+    gap: 5px;
+}
+
+button{
+    font-weight: bold;
+    background-color: white; 
+    border: 2px solid pink; 
+    padding: 8px 16px;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px; 
+    margin-left: 10px;
+    border-width: 3px;
+}
+
+button.notifications a {
+    color: pink; /* Color del texto */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.alert{
+    background: rgb(254, 212, 219);
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0px;
+    top: 55px;
+    border-radius: 4px;
+    border-left: 4px solid rgb(250, 74, 103); 
+    overflow: hidden;
+}
+.alert.hide{
+    display: none;
+}
+@keyframes show_notification{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.alert .warning{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(215, 48, 76);
+    font-size: 30px;
+
+}
+
+.alert .message{
+    padding: 0 20px;
+    font-size: 18px;
+    color: rgb(208, 50, 76);
+
+}
+
+.alert .close{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(254, 167, 181);
+    padding: 25px 15px;
+    cursor: pointer;
+
+}
+.close:hover{
+    background: rgb(254, 167, 181);
+}
+
+.close .est{
+    color: rgb(215, 48, 76);
+    font-size: 22px;
+    line-height: 40px;
+
+
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #f70354;
+    height: 98vh;   
+
+}
+
+.description{
+    font-size: 6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    margin-top: 150px; /* Bajar un poco el texto */
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+
+.description2{
+    font-size: 2.25rem;
+    font-weight: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    margin-top: 250px; 
+    position: absolute; 
+    top: 10px; 
+    left: 20px; 
+      
+}
+
+.information{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    background-color: #f1a1bc; 
+    color: white; 
+    padding-top: 24px; 
+
+}
