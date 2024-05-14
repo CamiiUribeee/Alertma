@@ -11,7 +11,7 @@
     <header class="head">
         <div class="head1">
             <img src="/images/logo_fondo2.png" alt="Logo">
-            <h1>Aler <h1 id="tma">tma</h1></h1>
+            <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
         <div class="head2">
@@ -28,9 +28,141 @@
         </div>
     </header>
 
-   
+    <div class="container">
+        <div class="pred">
+            <form action="" class="quest">
+                <label for="">Ingrese su edad:</label><br>
+                <input type="number" placeholder="Edad..." id="edad"><br><br>
+                <label for="">¿Antecedentes Familiares de Cáncer de Mama?</label><br>
+                <select name="" id="opt1">
+                    <option value="-1"></option>
+                    <option value="0">Ningún antecedente familiar</option>
+                    <option value="1">Antecedentes en parieintes lejanos</option>
+                    <option value="2">Antecedentes en madre, hermana o hija</option>
+                    <option value="3">Antecedentes en múltiples familiares directos</option>
+                </select><br><br>
+                <label for="">Síntomas Actuales:</label><br>
+                <label for="">¿Presencia de bultos o masas en el seno?</label><br>
+                <select name="" id="opt2">
+                    <option value="-1"></option>
+                    <option value="0">No.</option>
+                    <option value="1">Sí, pero pequeño y móvil.</option>
+                    <option value="2">Sí, grande o fijo.</option>
+                </select><br>
+                <label for="">¿Cambios en el pezón o la piel?</label><br>
+                <select name="" id="opt3">
+                    <option value="-1"></option>
+                    <option value="0">No.</option>
+                    <option value="1">Sí, retracción del pezón o piel enrojecida.</option>
+                    <option value="2">Secreción anormal del pezón.</option>
+                </select><br>
+                <label for="">¿Dolor mamario persistente?</label><br>
+                <select name="" id="opt4">
+                    <option value="-1"></option>
+                    <option value="0">No.</option>
+                    <option value="1">Sí, ocasional o leve.</option>
+                    <option value="2">Sí, constante o severo.</option>
+                </select><br><br>
+                <label for="">Otros Factores de riesgo:</label><br>
+                <label for="">¿Uso de terapia hormonal?</label><br>
+                <select name="" id="opt5">
+                    <option value="-1"></option>
+                    <option value="0">No.</option>
+                    <option value="1">Sí, durante menos de 5 años.</option>
+                    <option value="2">Sí, durante más de 5 años.</option>
+                </select><br>
+                <label for="">¿Presenta Obesidad o Sobrepeso?</label><br>
+                <select name="" id="opt6">
+                    
+                    <option value=-1></option>
+                    <option value="0">No.</option>
+                    <option value="1">Sí, con índice de masa corporal (IMC) elevado.</option>
+                </select><br>
+                <label for="">¿Consume alcohol?</label><br>
+                <select name="" id="opt7">
+                    <option value=(-1)></option>
+                    <option value="0">No.</option>
+                    <option value="1">Sí, consumo regular.</option>
+                    <option value="2">Sí, consumo excesivo.</option>
+                </select><br><br>
 
+                <a href="#" onclick="Prediagnostico()">Enviar respuestas</a><br><br>
+                <label for="" id="answer">Porcentaje: </label>
+
+
+                
+            </form>
+        </div>
+    </div>
     
 </body>
-
 </html>
+<style>
+    .quest{
+        background-color: pink;
+        padding: 10px;
+        margin: 20px;
+        text-align: center;
+        max-width: 50vh ;
+        display: grid;
+    }
+    .quest a{
+        padding: 5px;
+        background-color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        color: purple;
+        font-weight: 500;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .quest label{
+        margin-top: 5px ;
+    }
+</style>
+<script>
+    
+    function Prediagnostico(){
+        let edad = document.getElementById("edad").value;
+        let edad2 = 0;
+        if(edad <= 30){
+            edad2 = 0;
+        }else if(30<edad<=40){
+            edad2 = 1;
+        }else if(40<edad<=49){
+            edad2 = 2;
+        }else{
+            edad2 = 3;
+        }
+        let x;
+        let y;
+        let z;
+
+        var opt1 = parseInt(document.getElementById("opt1").value);
+        var opt3 = parseInt(document.getElementById("opt2").value);
+        var opt2 = parseInt(document.getElementById("opt3").value);
+        var opt4 = parseInt(document.getElementById("opt4").value);
+        var opt5 = parseInt(document.getElementById("opt5").value);
+        var opt6 = parseInt(document.getElementById("opt6").value);
+        var opt7 = parseInt(document.getElementById("opt7").value);
+        if(opt1 != -1 && opt2 != -1 && opt3 != -1 && opt4 != -1 && opt5 != -1 && opt6 != -1 && opt7 != -1){
+            x = (opt1+opt2+opt3+opt4+opt5+opt6+opt7+edad2);
+            z = Math.round((x/17)*100);
+            if(x<=4){
+                y = "Riesgo bajo: Basado en la información proporcionada, su nivel de riesgo de cáncer de mama es bajo. Sin embargo, es importante continuar con la autoexploración regular y consultar con su médico si nota cambios en sus senos.";
+            }else if(4<x<=9){
+                y = "Riesgo moderado: Según sus respuestas, se ha identificado un riesgo moderado de cáncer de mama. Le recomendamos programar una consulta médica para una evaluación completa."
+            }else{
+                y = "Alto riesgo: Basado en sus respuestas, se ha identificado un riesgo potencialmente alto de cáncer de mama. Le instamos a que programe una consulta médica de inmediato para una evaluación y pruebas adicionales."
+            }
+        }else{
+            y = "Complete todos los campos."
+            z = "";
+        }
+        
+        console.log(x);
+        document.getElementById("answer").innerText = z+"% "+y;
+        console.log(opt1);
+    console.log(opt2);
+    console.log(opt3);
+    }
+</script>

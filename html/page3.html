@@ -11,7 +11,7 @@
     <header class="head">
         <div class="head1">
             <img src="/images/logo_fondo2.png" alt="Logo">
-            <h1>Aler <h1 id="tma">tma</h1></h1>
+            <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
         <div class="head2">
@@ -23,9 +23,140 @@
                 <a href="">Contact</a>
             </nav>
         </div>
-        <div>
-            <h2 id="info"></h2>
+        <div class="reg">
+            <h2 id="info">Usuario</h2>
+            <div class="perfil pag">
+                        <img src="../icons/user.svg" alt="User">
+                        <p id="info2">Bienvenido</p>
+                        <p id="names">Nombres: </p>
+                        <p id="lastnames">Apellidos: </p>
+                        <p id="dates">Fecha Nacimiento: </p>
+                        <p id="edad">Edad: </p>
+                        <p id="cel">Teléfono: </p>
+                        <p id="genero">Género: </p>
+                </div>
         </div>
     </header>
+    <div class="container">
+        <div class="banner">
+            <div class="datos">
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                </div>
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                
+                </div>
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <button class="notifications button">
+        <a href="#" onclick="news()">Novedades</a>
+    </button>
+
+    <div class="alert hide">
+        <span class="warning"><Icon name="mdi:warning-circle" /></span>
+        <span class="message">Recordatorio: No olvides consultar a tu médico</span>
+        <span class="close">
+            <span class="est"><Icon name="mdi:close" /></span>
+        </span>
+
+    </div>  
+
+    <div class="container calculo">
+        
+        <form action="" id="dosis">
+            <label for="">Calcular tiempo entre Dosis</label>
+            <label for="">Seleccione el medicamento:</label>
+            <select name="Medicamentos" id="medicamento">
+                <option value=""></option>
+                <option value="1">Tamoxifeno (Nolvadex)</option>
+                <option value="2">Anastrozol (Arimidex)</option>
+                <option value="3">Letrozol (Femara)</option>
+                <option value="4">Exemestano (Aromasin)</option>
+            </select>
+            <label for="">Ingrese la dosis (mg)</label>
+            <input type="number" placeholder="Dosis..." id="number"><br>
+            <label for="" id="tiempo">Tiempo: </label><br>
+            <a href="#" class="button2" onclick="Tiempo_dosis()">Enviar</a>
+        </form>
+    </div>
+
+    <div id="maps">
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8053221849502!2d-73.35570610172263!3d8.235277535572813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b3e95519f21%3A0xf07212a20f0d5ca!2sLIGA%20CONTRA%20EL%20CANCER%2C%20CAPITULO%20OCA%C3%91A!5e0!3m2!1ses!2sco!4v1715273223892!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+
+    <div class="container cont">
+        <div class="color" id="c1">color1</div>
+        <div class="color" id="c2">color2</div>
+        <div class="color" id="c3">color3</div>
+        <div class="color" id="c4">color4</div>
+        <div class="color" id="c5">color5</div>
+    </div>
 </body>
 </html>
+<style>
+    .cont {
+        display: grid;
+        width: 100%;
+    }
+    .color{
+        height: 100px;
+        width: 100vh;
+    }
+    #c1{
+        background-color: #F2A7AD;
+    }
+    #c2{
+        background-color: #F2D0D0;
+    }
+    #c3{
+        background-color: #F2F2F2;
+    }
+    #C4{
+background-color: #D1DBDE;
+    }
+    #c5{
+        background-color: #3E6980;
+
+    }
+</style>
+<script>
+    
+    function Tiempo_dosis(){
+        let med = document.getElementById("medicamento").value;
+        let number = document.getElementById("number").value;
+        let tiempo;
+        let dss;
+        if (med == 1){
+            dss = 30;
+        }
+        else if(med == 2){
+            dss = 1;
+        }
+        else if(med = 3){
+            dss = 3.75;
+            
+        }
+        else if(med = 4){
+            dss = 25;
+        }
+        tiempo = (dss/number)*24;
+        document.getElementById("tiempo").innerText = tiempo + " días";
+
+    }
+
+    function news(){
+    const alertEl = document.querySelector('.alert');
+    alertEl.classList.toggle('hide');
+    }
+</script>

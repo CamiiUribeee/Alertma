@@ -1,10 +1,11 @@
 
 body{
     margin: 0 auto;
+    background-color: #F2F2F2;
 }
 
 .head{
-    background-color: #f1a1bc;
+    background-color: #F2A7AD;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -40,21 +41,6 @@ nav a:hover{
     text-decoration: overline;
     color: #f70354;
 }
-.login{
-    text-align: center;
-    text-decoration: none;
-    background-color:#f1a1bc;
-    border: white 2px solid;
-    border-radius: 10px;
-    padding: 0px 10px;
-    color: white;
-    margin-left: 5px;
-}
-.login:hover{
-    background-color: white;
-    color: #f1a1bc;
-    transition-duration: 200ms;
-}
 
 .container{
     width: 100%;
@@ -65,8 +51,8 @@ nav a:hover{
     margin: 5%;
     display: grid;
     align-items: center;
-    justify-self: center;
-    width: 70vh;
+    justify-content: center;
+    width: 80vh;
     height: 70vh;
     border-radius: 10px;
     background-color: #ee82ca;
@@ -85,7 +71,7 @@ nav a:hover{
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     font-size: 200%;
     padding: 20px 0px;
 }
@@ -97,155 +83,21 @@ nav a:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:white; 
     padding: 0px 5px;
-    height: 65px;
-    margin: 0px 5%;
 }
 .c2 a:hover{
     
     background-color:white;
     color: #ee82ca;
     border: #ee82ca;
-    height: 120px;
-    transition-duration: 150ms;
 }
-.c2 a:hover p{
-    visibility: visible;
-}
-.c2 p{
-    background-color: white;
-    visibility: hidden;
-    color: gray;
-    font-size: 38%;
-    border-radius: 10px;
-}
-#registro{
-    height: 100vh;
-}
-.formulario {
-    background-color:#f779a3;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px;
-    margin-top: 4%;
-    display: flex;
-    gap: 12px;
-    border-radius: 5px;
-    height: 60vh;
-    margin: 4% 5%;
-    justify-content: center;
-    text-align: center;
-}
-.formulario h3{
-    text-align: center;
-    font-weight: 100;
-    margin: 0% 20%;
 
-}
-.formulario input{
-    background-color:#f1a1bc;
-    border: 2px solid white;
-    color: white;
-    margin: 0% 20%;
-}
-.formulario input::placeholder{
-    color: white;
-}
-.formulario select{
-    border: 2px solid white;
+.formulario {
     background-color: #f1a1bc;
-    color: white;
-    margin: 0% 20%;
-}
-.formulario a{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 30%;
-    border-radius: 10px;
-    text-decoration: none;
-    color:#ee82ca;
-    font-weight: 800;
-    margin-top: 10px;
-}
-.form{
-    margin: 10px;
-    background-color: #f1a1bc;
-    width: 40%;
+    padding: 10px;
+    margin-top: 2%;
     display: grid;
     gap: 5px;
-    padding: 20px 0px;
 }
-
-
-#page{
-    display: flex;
-    justify-content: left;
-    height: 100vh;
-}
-.perfil{
-    display:grid;
-    align-items: start;
-    justify-content: start;
-    text-align: left;
-    background-color: #f1a1bc;
-    border-radius: 10px;
-    color: white;
-    font-size: medium;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 1%;
-    margin-left: 1%;
-    height: 100%;
-    padding: 0px 3%;
-    
-}
-.perfil img{
-    width: 10vh;
-    height: 10vh;
-}
-#info2 {
-    border-bottom: 2px solid white;
-}
-
-.banner{
-    background-image: url(/images/lazo.jpg);
-    background-color: #f70354;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    background-size:cover;
-    background-position: center;
-}
-.banner img{
-    height: 80%;
-    width: 100%;
-}
-
-.ban{
-    background-color: #f70354;
-    margin: 5px;
-    height: 200px;
-    width: 100px;
-    padding: 10px 50px;
-    color: white;
-
-}
-.datos{
-    display: flex;
-    height: 100px;
-}
-
-.pag{
-    display: none;
-    position: absolute;
-}
-.reg:hover .pag{
-    display: block;
-}
-
-
 
 .button{
     font-weight: bold;
@@ -338,34 +190,177 @@ nav a:hover{
 
 }
 
-#maps{
-margin: 10% 1% 2% 0%;
+.presentation{
     display: flex;
-    justify-content: end;
-}
-#map{
-    background-color:gray;
-    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    background-image: url(/images/f5.png);
+    color: #f70354;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;   
+    background-position:right;
+    background-size: cover;
+    margin-left: 20px;
+    
+    
+
 }
 
-.calculo{
-    margin-top: 10%;
+.banner {
+    width: 100%;
+    height: 100%;
+    margin-right: 0%; /* Ajusta la posición de la imagen hacia la derecha */
+    top: -10px;
+    transform: scaleX(-1);
 }
-#dosis{
-    display: grid;
-    gap: 5px;
-    background-color: #ee82ca;
-    padding: 10px;
-    font-size: large;
-    border-radius: 5px;
+
+.description{
+    font-size: 6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    margin-top: 150px; /* Bajar un poco el texto */
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
 }
-.button2{
+
+.description2{
+    font-size: 2.25rem;
+    font-weight: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    margin-top: 250px; 
+    position: absolute; 
+    top: 10px; 
+    left: 20px; 
+      
+}
+.login {
+    text-align: start;
+    margin: 10px 60px 0;
+}
+
+.login a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f1a1bc;
+    color: #000;
+    border: 1px solid #0d0f14;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    padding: 2px 5px;
-    background-color: white;
-    color: #ee82ca;
+    transition: all 0.7s;
+}
+
+.login a:hover {
+    background-color: #f70354;
+    border-color: #f70354;
+    color: white;
+}
+
+.login a p {
     font-weight: 600;
-    margin: 0px 30%;
-    border-radius: 5px;
+}
+
+
+.information{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    background-color: #3E6980; 
+    color: white; 
+    padding-top: 24px; 
+
+}
+
+.card_container{
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: -20px;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #f70354;
+    background: #fff;
     text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #000;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #ee82ca;
+}
+.card .back .link{
+    border-top: solid 1px #ffffff;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: #f70354;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
 }
