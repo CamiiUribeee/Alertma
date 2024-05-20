@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo_fondo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Alertma</title>
+</head>
+<body>
+    <header class="head">
+        <div class="head1">
+            <img src="../images/logo_fondo2.png" alt="Logo">
+            <h1>Alert <h1 id="tma">ma</h1></h1>
+            
+        </div>
+        <div class="head2">
+            <nav>
+                <a href="">Home</a>
+                <a href="">Info</a>
+                <a href="">Date</a>
+                <a href="">Blog</a>
+                <a href="">Contact</a>
+            </nav>
+        </div>
+        <div>
+            <h2>Username</h2>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <form action="" id="formulario">
+                <label for="">Paciente: </label><br><br>
+                <label for="">Medicamento: </label><br>
+                <select name="" id="med">
+                    <option value=""></option>
+                        <option value="Tamoxifeno">Tamoxifeno (Nolvadex)</option>
+                        <option value="Anastrozol">Anastrozol (Arimidex)</option>
+                        <option value="Letrozol">Letrozol (Femara)</option>
+                        <option value="Exemestano">Exemestano (Aromasin)</option>
+                        <option value="Trastuzumab">Trastuzumab (Herceptin)</option>
+                        <option value="Palbociclib">Palbociclib (Ibrance)</option>
+                </select><br><br>
+                <label for="">Dosis (mg):</label><br>
+                <input type="number" id="dosiss" placeholder="Dosis medicamento"><br><br>
+                <label for="">Tiempo: </label><br>
+                <input type="date" id="time"><br><br>
+                <a href="#" onclick="sendMed()">Enviar</a>
+            </form>
+            <form action="">
+
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+</html>
+<style>
+    #formulario{
+        background-color: rgb(209, 207, 207);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 50%;
+        text-align: center;
+    }
+</style>
+<script>
+
+    let datos = [["Medicamento","Dosis","Tiempo"]];
+    function sendMed(){
+        const med = document.getElementById("med").value;
+        const dosis = document.getElementById("dosiss").value;
+        const time = document.getElementById("time").value;
+
+        let lista = [];
+        lista.push(med,dosis,time);
+        datos.push(lista);
+        localStorage.setItem("datos", JSON.stringify(datos));
+        alert("Datos enviados.");
+
+
+    }
+
+</script>

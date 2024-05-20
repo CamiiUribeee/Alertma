@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="/js/functions.js"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/images/logo_fondo2.png" type="image/x-icon">
-        <link rel="stylesheet" href="/css/style1.css">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <title>Alertma</title>
-    </head>
-<body onload="cargar()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo_fondo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Alertma</title>
+</head>
+<body>
     <header class="head">
         <div class="head1">
-            <img src="/images/logo_fondo2.png" alt="Logo">
+            <img src="../images/logo_fondo2.png" alt="Logo">
             <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
@@ -25,84 +23,122 @@
                 <a href="">Contact</a>
             </nav>
         </div>
-        <div class="reg">
-            <h2 id="info"></h2>
-            <div class="perfil pag">
-                        <img src="../icons/user.svg" alt="User">
-                        <p id="info2">Bienvenido</p>
-                        <p id="names">Nombres: </p>
-                        <p id="lastnames">Apellidos: </p>
-                        <p id="dates">Fecha Nacimiento: </p>
-                        <p id="edad">Edad: </p>
-                        <p id="cel">Teléfono: </p>
-                        <p id="genero">Género: </p>
-                </div>
+        <div>
+            <h2>Username</h2>
         </div>
     </header>
-    <div class="container" id="page">
-        <div class="banner">
-            <div class="datos">
-                <div class="ban">
-                    <h3>Datos 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
-                </div>
-                <div class="ban">
-                    <h3>Datos 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
-                
-                </div>
-                <div class="ban">
-                    <h3>Datos 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
-                
-                </div>
-            </div>
-            
+
+    <main>
+        <div class="presentation">
+            <h1 class="description">
+                <Icon name="fluent:arrow-trending-lines-20-filled"/>
+                Alertma
+            </h1>
+            <p class="description2">Cáncer de Mama y Prediagnóstico Preventivo</p>
+            <a href="register.html" class="description3">
+                Registrate Aquí
+            </a>
         </div>
-    </div>
-    <button class="notifications button">
-        <a href="#" onclick="news()">Novedades</a>
-    </button>
 
-    <div class="alert hide">
-        <span class="warning"><Icon name="mdi:warning-circle" /></span>
-        <span class="message">Recordatorio: No olvides consultar a tu médico</span>
-        <span class="close">
-            <span class="est"><Icon name="mdi:close" /></span>
-        </span>
 
-    </div>  
-    
-    <div class="container" id="registro">
-        <form action="" class="formulario">
-            <div class="form">
-                <h3>Por favor, completa los siguientes campos.</h3>
-                <input type="text" placeholder="Ingrese su Nombre..." id="name" autocomplete="off">
-                <input type="text" placeholder="Ingrese su Apellido..." id="lastname" autocomplete="off">
-                <input type="date" id="date">
-                <input type="number" placeholder="Ingrese su Edad..." id="age" autocomplete="off">
+        <div class="recfather">
+            <div class="rec">
+                <h2>Recetas:</h2><br>
+                <div id="recetas"></div>
             </div>
+            <div></div>
+        </div>
 
-            
-            <div class="form">
-                <select name="Genero" id="gender">
-                    <option value="select">Género</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Otro">Otro</option>
-                </select>
-                <input type="email" placeholder="Ingrese su email..." autocomplete="off">
-                <input type="password" placeholder="Ingrese una contraseña..." autocomplete="off">
-                <input type="password" placeholder="Confirmar contraseña..." autocomplete="off">
-                <input type="number"  id="number" placeholder="Ingrese su teléfono..." autocomplete="off">
-                <a href="#" onclick="datos()">Registrarse</a>
+
+
+        <div class="card_container">
+            <div class="card">
+                <div class="face front">
+                    <img src="../images/tarjeta1.jpg" alt="">
+                    <h3>Autoexploración Mamaria</h3>
+                </div>
+                <div class="face back">
+                    <h3>Autoexploración Mamaria</h3>
+                    <p>¡Cuida de ti misma! La autoexploración mamaria es clave para detectar cualquier cambio en tu cuerpo. Tómate unos minutos cada mes para revisarte y detectar posibles señales de alerta temprana de cáncer de mama.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
             </div>
-
-
+    
+            <div class="card">
+                <div class="face front">
+                    <img src="../images/tarjeta2.jpg" alt="">
+                    <h3>Importancia del diagnóstico precoz</h3>
+                </div>
+                <div class="face back">
+                    <h3>Importancia del diagnóstico precoz</h3>
+                    <p>El tiempo es crucial. ¡No esperes! Un diagnóstico precoz aumenta las posibilidades de tratamiento exitoso. Consulta a tu médico regularmente y realiza mamografías periódicamente.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
+    
             
-        </form>
-    </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="../images/tarjeta3.jpg" alt="">
+                    <h3>Apoyo y comunidad</h3>
+                </div>
+                <div class="face back">
+                    <h3>Apoyo y comunidad</h3>
+                    <p>¡No estás sola! La comunidad y el apoyo son fundamentales. Encuentra grupos de apoyo, amigos y familiares que te respalden en tu viaje contra el cáncer de mama.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
     
+        </div>
+
+        <div class="information">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <p class="text-4xl">holaaa</p>
+                <p class="font-light text-lg w-[400px] text-center">redes sociales</p>			
+            </div>
+        </div>
     
+
+
+    </main>
+
+
 </body>
 </html>
+<style>
+    .recfather{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .rec{
+        background-color:#D1DBDE;
+        width: 50%;
+        padding: 5px;
+    }
+    #recetas div{
+        background-color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 10px 5px;
+        margin: 2px;
+    }
+</style>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let datos = localStorage.getItem('datos');
+        let datos2 = JSON.parse(datos);
+        
+
+        for(let y = 1;y<datos2.length;y++){
+                document.getElementById("recetas").innerHTML += "<div> <p>Receta"+y +": "+datos2[y][0]+" "+datos2[y][1]+"mg hasta "+datos2[y][2] +"</p></div>";
+        }
+
+        console.table(datos2);
+
+    });
+</script>

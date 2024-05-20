@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo_fondo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Alertma</title>
+</head>
+<body>
+    <header class="head">
+        <div class="head1">
+            <img src="../images/logo_fondo2.png" alt="Logo">
+            <h1>Alert <h1 id="tma">ma</h1></h1>
+            
+        </div>
+        <div class="head2">
+            <nav>
+                <a href="">Home</a>
+                <a href="">Info</a>
+                <a href="">Date</a>
+                <a href="">Blog</a>
+                <a href="">Contact</a>
+            </nav>
+        </div>
+        <div>
+            <h2 id="nameg"></h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="presentation">
+            <h1 class="description">
+                <Icon name="fluent:arrow-trending-lines-20-filled"/>
+                Alertma
+            </h1>
+            <p class="description2">Cáncer de Mama y Prediagnóstico Preventivo</p>
+        </div>
+
+        <div class="container">
+            <div class="info_pre">
+                <div class="info_pre2">
+                    <p>Te recomendamos hacer la prueba Prediagnóstica de manera preventiva, respondiendo unas preguntas te apoyamos con consejos y datos a tener en cuenta sobre el cáncer de mama.</p>
+                    <a href="page2.html">Realizar Prueba Prediagnóstica</a>
+                </div>
+                <img src="../images/logo_fondo2.png" alt="">
+            </div>
+        </div>
+        <div class="cont3">
+            <div class="calculo">
+                <form action="" id="dosis">
+                    <label for="">Calcular tiempo entre Dosis</label><br>
+                    <label for="">Seleccione el medicamento:</label>
+                    <select name="Medicamentos" id="medicamento">
+                        <option value=""></option>
+                        <option value="1">Tamoxifeno (Nolvadex)</option>
+                        <option value="2">Anastrozol (Arimidex)</option>
+                        <option value="3">Letrozol (Femara)</option>
+                        <option value="4">Exemestano (Aromasin)</option>
+                        <option value="5">Trastuzumab (Herceptin)</option>
+                        <option value="6">Palbociclib (Ibrance)</option>
+                    </select><br>
+                    <label for="">Ingrese la dosis (mg)</label>
+                    <input type="number" placeholder="Dosis..." id="number" autocomplete="off"><br>
+                    <label for="" id="tiempo">Tiempo: </label><br>
+                    <a class="button2" onclick="Tiempo_dosis()">Enviar</a>
+                </form>
+            </div>
+            <div class="info_cal">
+                <h3>Importancia del Tiempo entre Dosis</h3>
+                <p>El tiempo entre dosis de los medicamentos es crucial en el tratamiento del cáncer de mama para mantener niveles terapéuticos constantes en el organismo y minimizar el riesgo de efectos secundarios.</p>
+                <p id="nota">Nota: Este cálculo es una aproximación y puede no ser aplicable para todos los pacientes o situaciones. Los resultados pueden variar según las características individuales del paciente y el tipo específico de tratamiento. Siempre consulte a un profesional de la salud para obtener información precisa y siga las instrucciones de dosificación proporcionadas por su médico.</p>
+            </div>
+        </div>
+
+
+
+        <div class="card_container">
+            <div class="card">
+                <div class="face front">
+                    <img src="../images/tarjeta1.jpg" alt="">
+                    <h3>Autoexploración Mamaria</h3>
+                </div>
+                <div class="face back">
+                    <h3>Autoexploración Mamaria</h3>
+                    <p>¡Cuida de ti misma! La autoexploración mamaria es clave para detectar cualquier cambio en tu cuerpo. Tómate unos minutos cada mes para revisarte y detectar posibles señales de alerta temprana de cáncer de mama.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="face front">
+                    <img src="../images/tarjeta2.jpg" alt="">
+                    <h3>Importancia del diagnóstico precoz</h3>
+                </div>
+                <div class="face back">
+                    <h3>Importancia del diagnóstico precoz</h3>
+                    <p>El tiempo es crucial. ¡No esperes! Un diagnóstico precoz aumenta las posibilidades de tratamiento exitoso. Consulta a tu médico regularmente y realiza mamografías periódicamente.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="card">
+                <div class="face front">
+                    <img src="../images/tarjeta3.jpg" alt="">
+                    <h3>Apoyo y comunidad</h3>
+                </div>
+                <div class="face back">
+                    <h3>Apoyo y comunidad</h3>
+                    <p>¡No estás sola! La comunidad y el apoyo son fundamentales. Encuentra grupos de apoyo, amigos y familiares que te respalden en tu viaje contra el cáncer de mama.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="container" style="background-color:#F2D0D0; padding: 50px 0px;">
+            <div class="not1">
+                <h2>Recordatorios</h2>
+                <p>Utilizar los recordatorios de AlertMa te ayudará a llevar un control más riguroso de tu tratamiento, asegurando que no se te pase nada por alto y que sigas tu plan de tratamiento de manera efectiva. Tu salud y bienestar son nuestra prioridad, y estos recordatorios están diseñados para apoyarte en cada paso del camino.</p>
+            </div>
+            
+            <div class="Recordatorios">
+                <div>
+                    <form id="formRecord">
+                    
+                    <div id="formRecord1">
+                        <h3>Medicamentos</h3>
+                        <label for="medname">Nombre del Medicamento:</label>
+                        <input type="text" id="medname">
+                        
+                        <label for="dose">Dosis (mg):</label>
+                        <input type="number" id="dose">
+
+                        <label for="frecuency">Frecuencia (veces al día):</label>
+                        <input type="number" id="frecuency">
+
+                        <label for="time">Hora de Toma:</label>
+                        <input type="time" id="time">
+                    </div>
+                    <div></div>
+                    
+                    </form>
+                    <button id="send">Guardar</button>
+                    <button id="view">Ver Guardados</button>
+                </div>
+                
+                
+                
+                <div id="records" style="display: none;">
+                    <h2>Guardados</h2>
+                    <ul id="lista"></ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="maps">
+            <div id="maps2">
+                <p id="map22">¡Encuentra los Centros de Salud más Cercanos!</p>
+                <p>Selecciona alguno de los puntos de referencia de nuestra ciudad Ocaña y se te mostrará cuál es el centro de salud más cercano a ese punto:</p>
+                <div id="maps3">
+                    <a onclick="mapa1()">Parque 27 de Mayo</a>
+                    <a onclick="mapa2()">Coliseo</a>
+                    <a onclick="mapa3()">Terminalito Santa Clara</a>
+                </div>
+            </div>
+            <div id="mapp">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8053221849502!2d-73.35570610172263!3d8.235277535572813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b3e95519f21%3A0xf07212a20f0d5ca!2sLIGA%20CONTRA%20EL%20CANCER%2C%20CAPITULO%20OCA%C3%91A!5e0!3m2!1ses!2sco!4v1715273223892!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+
+        <div class="information">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <p class="text-4xl">holaaa</p>
+                <p class="font-light text-lg w-[400px] text-center">redes sociales</p>			
+            </div>
+        </div>
+    
+
+
+    </main>
+    
+</body>
+</html>
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+        const form = document.getElementById("formRecord");
+        const boton = document.getElementById("view");
+        const record = document.getElementById("records");
+        const lista = document.getElementById("lista");
+        const send = document.getElementById("send");
+
+        send.addEventListener('click',function(event){
+            event.preventDefault;
+
+            const medname = document.getElementById("medname").value;
+            const dose = document.getElementById("dose").value;
+            const frecuency = document.getElementById("frecuency").value;
+            const time = document.getElementById("time").value;
+
+            const medication = 'Medicamento: '+medname+"; Dosis: "+dose+"; Frecuencia: "+frecuency+"; Hora: "+time;
+            
+            const addmedication = document.createElement('li');
+            addmedication.textContent = medication;
+            lista.appendChild(addmedication);
+
+            form.reset();
+            alert('Recordatorios guardados exitosamente.');
+
+        })
+        boton.addEventListener('click', function(){
+            if (record.style.display === 'none') {
+                record.style.display = 'block';
+            } else {
+                record.style.display = 'none';
+            }
+        })
+    })
+
+        function mapa1(){
+            document.getElementById("mapp").innerHTML = '<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8053221849502!2d-73.35570610172263!3d8.235277535572813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b3e95519f21%3A0xf07212a20f0d5ca!2sLIGA%20CONTRA%20EL%20CANCER%2C%20CAPITULO%20OCA%C3%91A!5e0!3m2!1ses!2sco!4v1715273223892!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+        }
+        function mapa2(){
+            document.getElementById("mapp").innerHTML = '<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4863848705954!2d-73.36103977558251!3d8.254287150635612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b9b4fc45d01%3A0xa2ef79116e43fe4b!2sHospital%20Emiro%20Quintero%20Ca%C3%B1izares%2C%2070%2C%20Oca%C3%B1a%2C%20Norte%20de%20Santander!5e0!3m2!1ses!2sco!4v1715730844641!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+        }
+        function mapa3(){
+            document.getElementById("mapp").innerHTML = '<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d493.5399400379548!2d-73.36677459082902!3d8.270961335663655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b7ccbbb63c3%3A0x69c0d0ad29df9e90!2sU.b.a%20Ciudadela%20Norte!5e0!3m2!1ses!2sco!4v1715732292444!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+        }
+        
+
+        function Tiempo_dosis(){
+            let med = document.getElementById("medicamento").value;
+            let number = document.getElementById("number").value;
+            let tiempo;
+            let dss;
+            let vm;
+            if (med == 1){
+                dss = 20;
+                vm = 6;
+            }
+            else if(med == 2){
+                dss = 1;
+                vm = 2;
+            }
+            else if(med = 3){
+                dss = 2.5;
+                vm = 3;
+                
+            }
+            else if(med = 4){
+                dss = 25;
+                vm = 1;
+            }
+            else if(med = 5){
+                dss = 7;
+                vm = 5;
+            }
+            else if(med = 6){
+                dss = 125;
+                vm = 1.083;
+            }
+            tiempo = Math.round(vm*(1+(dss/number)));
+            document.getElementById("tiempo").innerText = "Tiempo: "+tiempo + " días";
+    
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const name = localStorage.getItem('sharedData');
+            document.getElementById("nameg").innerText = name ? name : "Usuario";
+        });
+    </script>

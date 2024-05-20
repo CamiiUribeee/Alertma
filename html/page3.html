@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/logo_fondo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="shortcut icon" href="../images/logo_fondo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style1.css">
     <title>Alertma</title>
 </head>
 <body>
     <header class="head">
         <div class="head1">
-            <img src="/images/logo_fondo2.png" alt="Logo">
+            <img src="../images/logo_fondo2.png" alt="Logo">
             <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
@@ -90,6 +90,15 @@
         </form>
     </div>
 
+
+    <div>
+        <form action="">
+            <label for="">Ingrese su nombre</label>
+            <input type="text" id="nameg" placeholder="Nombre">
+            <button type="submit" onclick="saveName()">Enviar</button>
+        </form>
+    </div>
+
     <div id="maps">
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8053221849502!2d-73.35570610172263!3d8.235277535572813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b3e95519f21%3A0xf07212a20f0d5ca!2sLIGA%20CONTRA%20EL%20CANCER%2C%20CAPITULO%20OCA%C3%91A!5e0!3m2!1ses!2sco!4v1715273223892!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -131,6 +140,11 @@ background-color: #D1DBDE;
     }
 </style>
 <script>
+    function saveName(){
+        const name = document.getElementById("nameg").value;
+        localStorage.setItem('sharedData', name);
+        alert("datos guardados");
+    }
     
     function Tiempo_dosis(){
         let med = document.getElementById("medicamento").value;

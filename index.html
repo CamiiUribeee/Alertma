@@ -4,118 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo_fondo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style1.css">
     <title>Alertma</title>
-</head>
-<body>
-    <header class="head">
-        <div class="head1">
-            <img src="images/logo_fondo2.png" alt="Logo">
-            <h1>Alert <h1 id="tma">ma</h1></h1>
-            
-        </div>
-        <div class="head2">
-            <nav>
-                <a href="">Home</a>
-                <a href="">Info</a>
-                <a href="">Date</a>
-                <a href="">Blog</a>
-                <a href="">Contact</a>
-            </nav>
-        </div>
-        <div>
-            <h2>Username</h2>
-        </div>
-    </header>
-
-    <main>
-        <div class="presentation">
-            <h1 class="description">
-                <Icon name="fluent:arrow-trending-lines-20-filled"/>
-                Alertma
-            </h1>
-            <p class="description2">Cancer de mama y diagnóstico preventivo</p>
-            <a href="html/login.html" class="hover:bg-[#0d0f14] hover:border-gray-300 hover:text-white transition-all duration-700 flex border border-[#0d0f14] justify-center items-center space-x-2 bg-gray-200 text-gray-800 rounded-xl px-5 py-2">
-                <p class="font-semibold">Registrate aquí</p>
-            </a>
-        </div>
-
-        <div class="login">
-            <a href="html/login.html" class="hover:bg-[#0d0f14] hover:border-gray-300 hover:text-white transition-all duration-700 flex border border-[#0d0f14] justify-center items-center space-x-2 bg-gray-200 text-gray-800 rounded-xl px-5 py-2">
-                <p class="font-semibold">Registrate aquí</p>
-            </a>
-        </div>
-
-
-
-        <div class="card_container">
-            <div class="card">
-                <div class="face front">
-                    <img src="/images/tarjeta1.jpg" alt="">
-                    <h3>Autoexploración Mamaria</h3>
-                </div>
-                <div class="face back">
-                    <h3>Autoexploración Mamaria</h3>
-                    <p>¡Cuida de ti misma! La autoexploración mamaria es clave para detectar cualquier cambio en tu cuerpo. Tómate unos minutos cada mes para revisarte y detectar posibles señales de alerta temprana de cáncer de mama.</p>
-                    <div class="link">
-                        <a href="#">Details</a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="card">
-                <div class="face front">
-                    <img src="/images/tarjeta2.jpg" alt="">
-                    <h3>Importancia del diagnóstico precoz</h3>
-                </div>
-                <div class="face back">
-                    <h3>Importancia del diagnóstico precoz</h3>
-                    <p>El tiempo es crucial. ¡No esperes! Un diagnóstico precoz aumenta las posibilidades de tratamiento exitoso. Consulta a tu médico regularmente y realiza mamografías periódicamente.</p>
-                    <div class="link">
-                        <a href="#">Details</a>
-                    </div>
-                </div>
-            </div>
-    
-            
-            <div class="card">
-                <div class="face front">
-                    <img src="/images/tarjeta3.jpg" alt="">
-                    <h3>Apoyo y comunidad</h3>
-                </div>
-                <div class="face back">
-                    <h3>Apoyo y comunidad</h3>
-                    <p>¡No estás sola! La comunidad y el apoyo son fundamentales. Encuentra grupos de apoyo, amigos y familiares que te respalden en tu viaje contra el cáncer de mama.</p>
-                    <div class="link">
-                        <a href="#">Details</a>
-                    </div>
-                </div>
-            </div>
-    
-        </div>
-
-        <div class="information">
-            <div class="flex flex-col justify-center items-center gap-5">
-                <p class="text-4xl">holaaa</p>
-                <p class="font-light text-lg w-[400px] text-center">redes sociales</p>			
-            </div>
-        </div>
-    
-
-
-    </main>
-
     <style>
-        
-        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, 
+                rgba(255, 182, 193, 0.4) 0%, 
+                rgba(255, 182, 193, 0.4) 50%, 
+                rgba(173, 216, 230, 0.4) 50%, 
+                rgba(173, 216, 230, 0.4) 100%);
+        }
+        #pantalla-dividida {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .izquierda, .derecha {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .izquierda {
+            background-image: url("images/editM-removebg-preview.png");
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+        }
+        .derecha {
+            background-image: url("images/editH-removebg-preview.png");
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+        }
+        .container {
+            position: relative;
+            z-index: 10;
+            background-color: rgba(255, 182, 193, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+        }
+        .cuadro {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .cuadro h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ff1493; 
+        }
+        .cuadro h2 span, .cuadro h2 span:last-child {
+            color: #1e90ff; 
+        }
+        .cuadro a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border: 2px solid rgba(0, 0, 0, 0); 
+            transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease; /* Transición suave para el borde, color y fondo */
+            background-color: rgba(173, 216, 230, 0.8); 
+        }
+        .cuadro a:hover {
+            color: #1E90FF; 
+            background-color: rgba(173, 216, 230, 0.8); 
+        }
+        .cuadro p {
+            font-size: 14px;
+            color: black; 
+            margin: 5px 0 0 0;
+        }
     </style>
-
-
-
-    <footer>
-
-
-    </footer>
-    <script></script>
+</head>
+<body onload="load_page()">
+    <section id="pantalla-dividida">
+        <div class="izquierda"></div>
+        <div class="derecha"></div>
+    </section>
+    <div class="container">
+        <div class="cuadro">
+            <div class="c1">
+                <h2>¡Bienvenido a <span>Alertma</span><span>!</span></h2>
+            </div>
+            <div class="c2">
+                <a href="html/page2.html" onmouseover="info()" onmouseout="leave()">
+                    No Paciente
+                    <p id="paciente">¿Eres nuevo en la plataforma? Te invitamos a realizar la prueba pre-diagnóstica de cáncer de mama.</p>
+                </a>
+                <a href="html/doctor.html" onmouseover="info()" onmouseout="leave()">
+                    Paciente
+                    <p id="medico">Consigue información sobre el cáncer de mama, aprovecha los recursos que proporcionamos y toma medidas preventivas importantes.</p>
+                </a>
+                <a href="html/page2.html" onmouseover="info()" onmouseout="leave()">
+                    Médico
+                    <p id="usuario">Comparte tu conocimiento, apoya a promover la concienciación y la detección temprana del cáncer de mama.</p>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

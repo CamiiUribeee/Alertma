@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/logo_fondo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style1.css">
-    <title>Alertma</title>
+    <link rel="shortcut icon" href="../images/logo_fondo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style1.css">
+    <title>Alertma</title> 
 </head>
 <body>
     <header class="head">
         <div class="head1">
-            <img src="/images/logo_fondo2.png" alt="Logo">
+            <img src="../images/logo_fondo2.png" alt="Logo">
             <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
         <div class="head2">
             <nav>
-                <a href="">Home</a>
-                <a href="">Info</a>
-                <a href="">Date</a>
-                <a href="">Blog</a>
-                <a href="">Contact</a>
+                <a href="login2.html">Home</a>
+                <a href="#">Info</a>
+                <a href="#">Date</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
             </nav>
         </div>
         <div>
@@ -28,7 +28,14 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container2">
+        
+        <div class="title">
+            <h1>Prediagnóstico Preventivo de Cáncer de Mama</h1>
+            <p>
+                Realizar un prediagnóstico del cáncer de mama puede ser fundamental para detectar tempranamente posibles signos de esta enfermedad y tomar medidas preventivas o de seguimiento adecuadas.
+            </p>
+        </div>
         <div class="pred">
             <form action="" class="quest">
                 <label for="">Ingrese su edad:</label><br>
@@ -37,7 +44,7 @@
                 <select name="" id="opt1">
                     <option value="-1"></option>
                     <option value="0">Ningún antecedente familiar</option>
-                    <option value="1">Antecedentes en parieintes lejanos</option>
+                    <option value="1">Antecedentes en parientes lejanos</option>
                     <option value="2">Antecedentes en madre, hermana o hija</option>
                     <option value="3">Antecedentes en múltiples familiares directos</option>
                 </select><br><br>
@@ -63,22 +70,25 @@
                     <option value="1">Sí, ocasional o leve.</option>
                     <option value="2">Sí, constante o severo.</option>
                 </select><br><br>
+
+            </form>
+            <form action="" class="quest">
                 <label for="">Otros Factores de riesgo:</label><br>
-                <label for="">¿Uso de terapia hormonal?</label><br>
+                <label for="">¿Uso de terapia hormonal?</label>
                 <select name="" id="opt5">
                     <option value="-1"></option>
                     <option value="0">No.</option>
                     <option value="1">Sí, durante menos de 5 años.</option>
                     <option value="2">Sí, durante más de 5 años.</option>
                 </select><br>
-                <label for="">¿Presenta Obesidad o Sobrepeso?</label><br>
+                <label for="">¿Presenta Obesidad o Sobrepeso?</label>
                 <select name="" id="opt6">
                     
                     <option value=-1></option>
                     <option value="0">No.</option>
                     <option value="1">Sí, con índice de masa corporal (IMC) elevado.</option>
                 </select><br>
-                <label for="">¿Consume alcohol?</label><br>
+                <label for="">¿Consume alcohol?</label>
                 <select name="" id="opt7">
                     <option value=(-1)></option>
                     <option value="0">No.</option>
@@ -86,50 +96,132 @@
                     <option value="2">Sí, consumo excesivo.</option>
                 </select><br><br>
 
-                <a href="#" onclick="Prediagnostico()">Enviar respuestas</a><br><br>
-                <label for="" id="answer">Porcentaje: </label>
+                <a onclick="Prediagnostico()">Enviar respuestas</a><br><br>
 
 
                 
             </form>
+            <div class="pred2" id="resultado" style="display: none;">
+                <h2>Resultados:</h2>
+                <img src="../images/f2.jpg" alt="">
+                <p id="answer"></p>
+                <a href="paciente.html" class="btn-continuar">Continua aquí</a>
+            </div>
         </div>
-    </div>
-
-
-    <div class="graphBox">
-        <h2>holi</h2>
-        <div class="box">
-            <canvas id="myChart"></canvas>
+        <div class="title">
+            <h3>¡Recuerda!</h3>
+            <p>- Es importante recordar que el prediagnóstico en línea proporciona una evaluación preliminar y no reemplaza la evaluación médica profesional.</p>
+            <p>- Los resultados del prediagnóstico deben considerarse como una guía inicial y no como un diagnóstico definitivo.</p>
+            <p>- Se recomienda encarecidamente que cualquier resultado de prediagnóstico preocupante sea discutido con un médico u especialista en salud mamaria.</p>
         </div>
-        <div class="box"></div>
     </div>
     
 </body>
 </html>
 <style>
-    .quest{
-        background-color: pink;
-        padding: 10px;
+    body{
+        background-color: #F2F2F2;
+    }
+    .container2{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .title{
+        text-align: center;
+        background-color: rgba(173, 216, 230, 0.8);
+        margin: 0px 50px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+    }
+    .title p{
+        margin: 5px 150px;
+    }
+    .pred{
+        display: flex;
+        justify-content: center;
+    }
+    .pred2{
+        background-color: rgba(255, 182, 193, 0.8);
+        max-width: 50vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
         margin: 20px;
+    }
+    .pred2 img{
+        max-width: 100%; 
+        max-height: 100%; 
+        display: block; 
+        margin: auto; 
+
+    }
+    .pred2 p{
+        padding: 10px;
+        text-align: center;
+    }
+    .quest{
+        background-color: white;
+        padding: 10px 20px;
+        margin: 20px 10px;
         text-align: center;
         max-width: 50vh ;
         display: grid;
+        
     }
     .quest a{
-        padding: 5px;
-        background-color: white;
+        padding: 10px 5px;
+        background-color: rgba(255, 182, 193, 0.8);
         border-radius: 5px;
         text-decoration: none;
-        color: purple;
-        font-weight: 500;
+        color: #f70354;
+        font-weight: 900;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .quest a:hover{
+        cursor: pointer;
+        color: black;
+        background-color:rgba(173, 216, 230, 0.8);
+    }
+    .quest input{
+        border-radius: 5px;
+        border: rgba(255, 182, 193, 0.8) 1px solid;
+        background-color: rgba(255, 182, 193, 0.8);
+        padding: 10px 5px;
     }
     .quest label{
         margin-top: 5px ;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .quest select{
+        background-color: rgba(255, 182, 193, 0.8);
+        border-radius: 5px;
+        border: rgba(255, 54, 221, 0.965) 1px solid;
+        color: #000203;
+        padding: 10px 5px;
+    }
+    .quest select:hover{
+        border:1px solid #30aff4;
+    }
+    .btn-continuar {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #f70354; 
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-continuar:hover {
+        background-color: #a00337; 
     }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/my_chart.js" ></script>
 <script>
     
     function Prediagnostico(){
@@ -137,9 +229,9 @@
         let edad2 = 0;
         if(edad <= 30){
             edad2 = 0;
-        }else if(30<edad<=40){
+        }else if(30<edad && edad<=40){
             edad2 = 1;
-        }else if(40<edad<=49){
+        }else if(40<edad && edad<=49){
             edad2 = 2;
         }else{
             edad2 = 3;
@@ -160,11 +252,12 @@
             z = Math.round((x/17)*100);
             if(x<=4){
                 y = "Riesgo bajo: Basado en la información proporcionada, su nivel de riesgo de cáncer de mama es bajo. Sin embargo, es importante continuar con la autoexploración regular y consultar con su médico si nota cambios en sus senos.";
-            }else if(4<x<=9){
+            }else if(4<x && x<10){
                 y = "Riesgo moderado: Según sus respuestas, se ha identificado un riesgo moderado de cáncer de mama. Le recomendamos programar una consulta médica para una evaluación completa."
-            }else{
+            }else if(9<x){
                 y = "Alto riesgo: Basado en sus respuestas, se ha identificado un riesgo potencialmente alto de cáncer de mama. Le instamos a que programe una consulta médica de inmediato para una evaluación y pruebas adicionales."
             }
+            document.getElementById("resultado").style.display = "block";
         }else{
             y = "Complete todos los campos."
             z = "";
@@ -172,8 +265,5 @@
         
         console.log(x);
         document.getElementById("answer").innerText = z+"% "+y;
-        console.log(opt1);
-    console.log(opt2);
-    console.log(opt3);
     }
 </script>

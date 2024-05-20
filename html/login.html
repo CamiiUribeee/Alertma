@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/logo_fondo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style1.css">
-    <title>Alertma</title>
-</head>
-<body onload="load_page()">
+    <head>
+        <script src="../js/functions.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../images/logo_fondo2.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/style1.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <title>Alertma</title>
+    </head>
+<body onload="cargar()">
     <header class="head">
         <div class="head1">
-            <img src="/images/logo_fondo2.png" alt="Logo">
+            <img src="../images/logo_fondo2.png" alt="Logo">
             <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
@@ -24,47 +25,86 @@
                 <a href="">Contact</a>
             </nav>
         </div>
-        <div>
-            <a href="" class="login">Iniciar Sesión</a>
-            <a href="" class="login">Registrarse</a>
+        <div class="reg">
+            <h2 id="info"></h2>
+            <div class="perfil pag">
+                        <img src="../icons/user.svg" alt="User">
+                        <p id="info2">Bienvenido</p>
+                        <p id="names">Nombres: </p>
+                        <p id="lastnames">Apellidos: </p>
+                        <p id="dates">Fecha Nacimiento: </p>
+                        <p id="edad">Edad: </p>
+                        <p id="cel">Teléfono: </p>
+                        <p id="genero">Género: </p>
+                </div>
         </div>
     </header>
-    <div class="container">
-        <div class="cuadro">
-            <div class="c1">
-                <h2>¡Bienvenido a Alertma!</h2>
-            </div>
-            <div class="c2">
-                <a href="page1.html" onmouseover="info()" onmouseout="leave()">
-                    Paciente<p id="paciente">Consigue información sobre el cáncer de mama, aprovecha los recursos que proporcionamos y toma medidas preventivas importantes.</p>
-                </a>
+
+    
+    <div class="container" id="page">
+        <div class="banner">
+            <div class="datos">
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                </div>
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
                 
-                <a href="page2.html" onmouseover="info()" onmouseout="leave()">
-                    Médico<p id="medico">Comparte tu conocimiento, apoya a promover la concienciación y la detección temprana del cáncer de mama.</p>
-                </a>
-                <a href="page3.html" onmouseover="info()" onmouseout="leave()">
-                    Creador<p id="creador">Explora la plataforma a tu gusto, sin limitaciones, viendo todos aquellos detalles que se ocultan al público.</p>
-                </a>
+                </div>
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                
+                </div>
             </div>
+            
         </div>
-        
     </div>
+    <button class="notifications button">
+        <a href="#" onclick="news()">Novedades</a>
+    </button>
+
+    <div class="alert hide">
+        <span class="warning"><Icon name="mdi:warning-circle" /></span>
+        <span class="message">Recordatorio: No olvides consultar a tu médico</span>
+        <span class="close">
+            <span class="est"><Icon name="mdi:close" /></span>
+        </span>
+
+    </div>  
+    
+    <div class="container" id="registro">
+        <form action="" class="formulario">
+            <div class="form">
+                <h3>Por favor, completa los siguientes campos.</h3>
+                <input type="text" placeholder="Ingrese su Nombre..." id="name" autocomplete="off">
+                <input type="text" placeholder="Ingrese su Apellido..." id="lastname" autocomplete="off">
+                <input type="date" id="date">
+                <input type="number" placeholder="Ingrese su Edad..." id="age" autocomplete="off">
+            </div>
+
+            
+            <div class="form">
+                <select name="Genero" id="gender">
+                    <option value="select">Género</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <input type="email" placeholder="Ingrese su email..." autocomplete="off">
+                <input type="password" placeholder="Ingrese una contraseña..." autocomplete="off">
+                <input type="password" placeholder="Confirmar contraseña..." autocomplete="off">
+                <input type="number"  id="number" placeholder="Ingrese su teléfono..." autocomplete="off">
+                <a href="#" onclick="datos()">Registrarse</a>
+            </div>
+
+
+            
+        </form>
+    </div>
+    
+    
 </body>
 </html>
-<script>
-    /*var paciente = document.getElementById("paciente");
-    var medico = document.getElementById("medico");
-    var creador = document.getElementById("creador");
-    function load_page(){
-        paciente.style.visibility = "hidden";
-        medico.style.visibility = "hidden";
-        creador.style.visibility = "hidden";
-
-    }
-    function info(){
-        paciente.style.visibility = "visible";
-    }
-    function leave(){
-        paciente.style.visibility = "hidden";
-    }*/
-</script>
