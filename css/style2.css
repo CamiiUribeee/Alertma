@@ -4,20 +4,19 @@ body{
     background-color: #F2F2F2;
 }
 
-.head{
+.head{ 
     background-color:  rgba(255, 182, 193, 0.8);
     height: 10vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+    font-size: 1.1rem;
 }
 .head1{
     display: flex;
     align-items: center;
-    color: #f70354;
     font-size:smaller;
 }
 #tma {
@@ -319,7 +318,7 @@ nav a:hover{
 
 }
 
-.card_container{
+.card_container {
     background-color: white;
     display: flex; 
     justify-content: space-between; 
@@ -329,16 +328,40 @@ nav a:hover{
     padding: 20px;
     margin-top: -20px;
     height: 100vh;
+    padding-top: 60px; 
+    position: relative; 
 }
 
-.card{
+.card_container .header-text {
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 64px; 
+    color: #e5dafb; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1; 
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 2px #87CEFA; 
+    background: #e5dafb; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #e5dafb; 
+}
+
+
+.card {
     position: relative;
     width: 300px;
     height: 350px;
     margin: 20px;
 }
 
-.card .face{
+.card .face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -347,17 +370,20 @@ nav a:hover{
     overflow: hidden;
     transition: .5s;
 }
-.card .front{
+
+.card .front {
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 0 5px 10px #000;
 }
-.card .front img{
+
+.card .front img {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 82%;
     object-fit: cover;
 }
-.card .front h3{
+
+.card .front h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -367,7 +393,8 @@ nav a:hover{
     background: #fff;
     text-align: center;
 }
-.card .back{
+
+.card .back {
     transform: perspective(600px) rotateY(180deg);
     background: rgba(173, 216, 230, 0.8);
     padding: 15px;
@@ -378,26 +405,32 @@ nav a:hover{
     text-align: center;
     box-shadow: 0 5px 10px #0f4463;
 }
-.card .back .link{
+
+.card .back .link {
     border-top: solid 1px #ffffff;
     height: 50px;
     line-height: 50px;
 }
-.card .back .link a{
+
+.card .back .link a {
     color: #ffffff;
 }
-.card .back h3{
+
+.card .back h3 {
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
-.card .back p{
+
+.card .back p {
     letter-spacing: 1px;
 }
-.card:hover .front{
+
+.card:hover .front {
     transform: perspective(600px) rotateY(180deg);
 }
-.card:hover .back{
+
+.card:hover .back {
     transform: perspective(600px) rotateY(360deg);
 }
 .boton{
